@@ -89,7 +89,7 @@ const userController = {
         )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({message: 'No User with this particular ID!'});
+                    res.status(404).json({message: 'No user with this particular ID!'});
                     return;
                 }
                 res.json(dbUserData);

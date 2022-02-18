@@ -21,10 +21,10 @@ const ReactionSchema = new Schema (
             type: String,
             required: true
         },
-        createAt: {
+        createdAt: {
             type: Date,
             default: Date.now,
-            get: createAtVal => dateFormat(createAtVal)
+            get: createdAtVal => dateFormat(createdAtVal)
         }
     },
     {
@@ -46,10 +46,10 @@ const ThoughtSchema = new Schema(
             maxlength: 280
 
         },
-        createAt: {
+        createdAt: {
             type: Date,
             default: Date.now,
-            get: createAtVal => dateFormat(createAtVal)
+            get: createdAtVal => dateFormat(createdAtVal)
         },
         username: {
             type: String,
@@ -60,7 +60,7 @@ const ThoughtSchema = new Schema(
         reactions: [ReactionSchema]
     },
     {
-        toJson: {
+        toJSON: {
             virtuals: true,
             getters: true
         },
